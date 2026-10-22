@@ -1,0 +1,41 @@
+{
+  "name": "litelite",
+  "displayName": "LiteLite",
+  "description": "Draws the token background colours that VS Code themes can declare but VS Code ignores. Includes LiteLite, a light theme that uses them.",
+  "version": "0.1.0",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {
+    "build-theme": "node scripts/build-theme.js",
+    "bundle": "vsce package",
+    "publish": "vsce publish"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "LiteLite",
+        "label": "LiteLite",
+        "uiTheme": "vs",
+        "path": "./themes/litelite-color-theme.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
+  },
+  "devDependencies": {
+    "vsce": "^2.15.0"
+  }
+}

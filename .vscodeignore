@@ -1,0 +1,6 @@
+.vscode/
+scripts/
+sample.ts
+*.vsix
+.gitignore
+**/.DS_Store
